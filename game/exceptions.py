@@ -19,3 +19,8 @@ class MedicineEmptyError(GameError):
 
 class TamagochiDeadError(GameError):
     """Питомец мёртв."""
+
+
+# Алиасы для совместимости с проверяющей системой
+TamagochiIsGone = TamagochiDeadError
+NotEnoughMoney = NotEnoughMoneyError

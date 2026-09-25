@@ -1,6 +1,7 @@
 """Точка входа в игру «Тамагочи»."""
 
 import os
+import sys
 
 from game.clicker import SimpleRandomClicker
 from game.game import SimpleGame
@@ -91,7 +92,8 @@ def main() -> None:
             print("Питомец умер. Игра окончена.")
             break
 
-        os.system("cls" if os.name == "nt" else "clear")
+        if sys.stdout.isatty():
+            os.system("cls" if os.name == "nt" else "clear")
 
 
 if __name__ == "__main__":

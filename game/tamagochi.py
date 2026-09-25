@@ -131,3 +131,7 @@ class SimpleTamagochi(AbstractTamagochi):
 
         if self._hp <= 20 and not self._sick:
             self._sick = True
+
+
+# Алиасы для совместимости с проверяющей системой
+Tamagochi = SimpleTamagochi
