@@ -44,7 +44,7 @@ class AbstractTamagochi(ABC):
         """Обновить состояние питомца за один тик."""
 
 
-class SimpleTamagochi(AbstractTamagochi):
+class Tamagochi(AbstractTamagochi):
     """Простая реализация питомца."""
 
     MAX_STAT = 100
@@ -133,5 +133,5 @@ class SimpleTamagochi(AbstractTamagochi):
             self._sick = True
 
 
-# Алиасы для совместимости с проверяющей системой
-Tamagochi = SimpleTamagochi
+# Совместимость со старым именем
+SimpleTamagochi = Tamagochi

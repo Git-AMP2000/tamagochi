@@ -66,7 +66,7 @@ class AbstractGame(ABC):
         """Возвращает сумку с лекарствами."""
 
 
-class SimpleGame(AbstractGame):
+class Game(AbstractGame):
     """Простая реализация игры."""
 
     def __init__(
@@ -283,5 +283,5 @@ class SimpleGame(AbstractGame):
         return status
 
 
-# Алиасы для совместимости с проверяющей системой
-Game = SimpleGame
+# Совместимость со старым именем
+SimpleGame = Game

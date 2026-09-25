@@ -21,7 +21,7 @@ class AbstractClicker(ABC):
         """Возвращает доход за последний клик."""
 
 
-class SimpleRandomClicker(AbstractClicker):
+class Clicker(AbstractClicker):
     """Кликер со случайным доходом."""
 
     def __init__(self, min_income: int = 10, max_income: int = 20) -> None:
@@ -47,5 +47,5 @@ class SimpleRandomClicker(AbstractClicker):
         return self._income_per_click
 
 
-# Алиасы для совместимости с проверяющей системой
-Clicker = SimpleRandomClicker
+# Совместимость со старым именем
+SimpleRandomClicker = Clicker
